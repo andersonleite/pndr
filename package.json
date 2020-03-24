@@ -1,0 +1,38 @@
+{
+  "name": "poppa",
+  "version": "0.0.1",
+  "description": "Poppa",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
+    "deploy": "npm run build && gcloud app deploy --project poppa-272022"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andersonleite/poppa.git"
+  },
+  "keywords": [
+    "music"
+  ],
+  "author": "Anderson Leite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andersonleite/poppa/issues"
+  },
+  "homepage": "https://github.com/andersonleite/poppa#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "html-srcsets-loader": "^0.5.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
