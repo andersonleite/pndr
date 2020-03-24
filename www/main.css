@@ -1,2 +1,2 @@
-body{background:#1A1A1A}p,li{color:#F3B5A8}.poppa{border-radius:50%;background:#F3B5A8;width:100px;height:100px}
+@font-face{font-family:'Woodland';src:url(fonts/PPWoodland-Regular.woff2) format("woff2"),url(fonts/PPWoodland-Regular.woff) format("woff"),url(fonts/PPWoodland-Regular.ttf) format("truetype")}body{background:#1A1A1A;font-family:'Woodland', sans-serif;text-transform:uppercase}p,li{color:#F3B5A8}.poppa{border-radius:50%;background:#F3B5A8;width:100px;height:100px}
 
