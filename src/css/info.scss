@@ -1,18 +1,24 @@
 .info {
-  padding: 60px;
+  padding: 40px;
   p {
-    font-size: 20px;
+    font-size: 16px;
     color: $orange;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   li, span {
     font-size: 16px;
     color: $pink;
-    line-height: 30px;
+    line-height: 20px;
   }
   span {
     margin-bottom: 40px;
     display: block;
     line-height: 25px;
+  }
+}
+
+@media (max-width: 768px){
+  .info{
+    padding-top: 0px;
   }
 }

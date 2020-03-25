@@ -10,6 +10,12 @@
 body {
   background: $bg;
   font-family: 'Woodland', sans-serif;
+
+}
+a {
+  color: $pink;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 p {
