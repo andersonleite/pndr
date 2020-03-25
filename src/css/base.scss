@@ -4,20 +4,14 @@
   url('fonts/PPWoodland-Regular.woff') format('woff'),
   url('fonts/PPWoodland-Regular.ttf') format('truetype');
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
   background: $bg;
   font-family: 'Woodland', sans-serif;
-  text-transform: uppercase;
 }
 
-p, li {
+p {
   color: $orange;
-}
-
-.poppa {
-  border-radius: 50%;
-  background: $orange;
-  width: 100px;
-  height: 100px;
 }

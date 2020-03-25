@@ -1,0 +1,18 @@
+.info {
+  padding: 60px;
+  p {
+    font-size: 20px;
+    color: $orange;
+    margin-bottom: 20px;
+  }
+  li, span {
+    font-size: 16px;
+    color: $pink;
+    line-height: 30px;
+  }
+  span {
+    margin-bottom: 40px;
+    display: block;
+    line-height: 25px;
+  }
+}
