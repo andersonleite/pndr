@@ -1,16 +1,42 @@
-const poppa = document.querySelector('#poppa');
+// lOGO
+// ==========================================================================
+const poppa = document.querySelector('.logo');
+const poppaContainer = document.querySelector('.poppa-container');
+poppaContainer.addEventListener("mouseover", (event)=>{
 
-const letters = document.querySelectorAll('.poppa-letter');
+  // start logo anim
+  poppa.classList.add('pulse')
 
-poppa.addEventListener("mouseover", (event)=>{
-  letters.forEach((l)=>{
-    l.style.marginLeft = '200px'
-  })
+  // start letters anim
+  for( var i = 0; i <= 4; i++ ) {
+    var letter = document.querySelector( '.poppa-' + i );
+    letter.classList.add( 'animate' );
+  }
+
 })
 
-poppa.addEventListener("mouseout", (event)=>{
-  letters.forEach((l)=>{
-    l.style.marginLeft = '0px'
-  })
+poppaContainer.addEventListener("animationend", (event)=> {
+
+  // stop logo anim
+  poppa.classList.remove('pulse')
+
+  // stop letters anim
+  for( var i = 0; i <= 4; i++ ) {
+    var letter = document.querySelector( '.poppa-' + i );
+    letter.classList.remove( 'animate' );
+  }
+
 })
 
+
+// LETTERS
+// ==========================================================================
+// for( var i = 0; i <= 4; i++ ) {
+//   var letter = document.querySelector( '.poppa-' + i );
+//   letter.addEventListener( 'mouseover', function() {
+//     this.classList.add( 'animate' );
+//   });
+//   letter.addEventListener( 'animationend', function() {
+//     this.classList.remove( 'animate' );
+//   });
+// }

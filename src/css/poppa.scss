@@ -13,6 +13,18 @@
     right: 0;
     margin: auto;
     z-index: -1;
+    will-change: transform;
+  }
+
+  .pulse{
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: poppa;
   }
 
   width: 100%;
@@ -52,5 +64,71 @@
   }
   .poppa-container{
     display: none;
+  }
+}
+
+// logo anim
+// ============================================
+@keyframes poppa {
+  0% {
+    transform: scale(1);
+    //box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  50% {
+    transform: scale(0.98);
+    //box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    //box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+// letters anim
+// ============================================
+.poppa-name {
+
+  div {
+    display: inline-block;
+    position: relative;
+    padding: .5em .2em;
+
+    &.animate {
+      animation: bounce 1.5s ease-in-out;
+      animation-iteration-count: 1;
+
+      &:nth-child(2n) {
+        animation: bounce2 1.5s ease-in-out;
+      }
+
+      &:nth-child(3n) {
+        animation: bounce3 1.5s ease-in-out;
+      }
+    }
+
+    @keyframes bounce {
+      0%   { transform: translateY( 0 ) rotate( 0 ); }
+      50%  { transform: translateY( -.5em ) rotate( 30deg ); }
+      70%  { transform: translateY( .3em ) rotate( -5deg ); }
+      90%  { transform: translateY( -.1em ) rotate( 2deg ); }
+      100% { transform: translateY( 0 ) rotate( 0 ); }
+    }
+
+    @keyframes bounce2 {
+      0%   { transform: translateY( 0 ) rotate( 0 ); }
+      50%  { transform: translateY( -.5em ) rotate( -10deg ); }
+      70%  { transform: translateY( .3em ) rotate( 30deg ); }
+      90%  { transform: translateY( -.1em ) rotate( -10deg ); }
+      100% { transform: translateY( 0 ) rotate( 0 ); }
+    }
+    @keyframes bounce3 {
+      0%   { transform: translateY( 0 ) rotate( 0 ); }
+      60%  { transform: translateY( -1em ) rotate( 60deg ); }
+      80%  { transform: translateY( .5em ) rotate( -20deg ); }
+      90%  { transform: translateY( -.2em ) rotate( 5deg ); }
+      100% { transform: translateY( 0 ) rotate( 0 ); }
+    }
   }
 }
