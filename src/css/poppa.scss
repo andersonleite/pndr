@@ -88,47 +88,151 @@
 
 // letters anim
 // ============================================
+$TIMING: .5s;
 .poppa-name {
 
-  div {
+  .poppa-0{
+    animation: bounce-back-0 $TIMING linear forwards;
+    &.animate {
+      animation: bounce-0 $TIMING linear forwards;
+    }
+  }
+
+  .poppa-1{
+    animation: bounce-back-1 $TIMING linear forwards;
+    &.animate {
+      animation: bounce-1 $TIMING linear forwards;
+    }
+  }
+
+  .poppa-2{
+    animation: bounce-back-2 $TIMING linear forwards;
+    &.animate {
+      animation: bounce-2 $TIMING linear forwards;
+    }
+  }
+
+  .poppa-3{
+    animation: bounce-back-3 $TIMING linear forwards;
+    &.animate {
+      animation: bounce-3 $TIMING linear forwards;
+    }
+  }
+
+  .poppa-4{
+    animation: bounce-back-4 $TIMING linear forwards;
+    &.animate {
+      animation: bounce-4 $TIMING linear forwards;
+    }
+  }
+
+  .div {
     display: inline-block;
     position: relative;
     padding: .5em .2em;
+    //animation: bounce-back .5s ease-in-out;
+    animation-fill-mode: forwards;
+    will-change: transform;
 
-    &.animate {
-      animation: bounce 1.5s ease-in-out;
-      animation-iteration-count: 1;
+    //&.animate {
+    //  animation-fill-mode: forwards;
+    //  animation-iteration-count: 1;
+    //
+    //  &:nth-child(2n) {
+    //    //animation: bounce2 .5s ease-in-out;
+    //    animation-fill-mode: forwards;
+    //    animation-iteration-count: 1;
+    //  }
+    //
+    //  //&:nth-child(3n) {
+    //  //  animation: bounce3 1.5s ease-in-out;
+    //  //}
+    //}
 
-      &:nth-child(2n) {
-        animation: bounce2 1.5s ease-in-out;
-      }
-
-      &:nth-child(3n) {
-        animation: bounce3 1.5s ease-in-out;
-      }
+    // P - 0
+    @keyframes bounce-back-0 {
+      0%   { transform: translateY( 2em ) translateX( -13em ) rotate( -45deg ); }
+      //25%  { transform: translateY( -.1em ) rotate( 30deg ); }
+      50%  { transform: translateY( .3em ) rotate( -5deg ); }
+      //75%  { transform: translateY( -.5em ) rotate( 2deg ); }
+      100% { transform: translateY( 0 ) translateX( 0 ) rotate( 0 ); }
     }
 
-    @keyframes bounce {
-      0%   { transform: translateY( 0 ) rotate( 0 ); }
-      50%  { transform: translateY( -.5em ) rotate( 30deg ); }
-      70%  { transform: translateY( .3em ) rotate( -5deg ); }
-      90%  { transform: translateY( -.1em ) rotate( 2deg ); }
-      100% { transform: translateY( 0 ) rotate( 0 ); }
+    @keyframes bounce-0 {
+      0%   { transform: translateY( 0 ) translateX( 0 ) rotate( 0 ); }
+      //25%  { transform: translateY( -.5em ) rotate( 30deg ); }
+      50%  { transform: translateY( .3em ) rotate( -5deg ); }
+      //75%  { transform: translateY( -.1em ) rotate( 2deg ); }
+      100% { transform: translateY( 2em ) translateX( -13em ) rotate( -45deg ); }
     }
 
-    @keyframes bounce2 {
-      0%   { transform: translateY( 0 ) rotate( 0 ); }
-      50%  { transform: translateY( -.5em ) rotate( -10deg ); }
-      70%  { transform: translateY( .3em ) rotate( 30deg ); }
-      90%  { transform: translateY( -.1em ) rotate( -10deg ); }
-      100% { transform: translateY( 0 ) rotate( 0 ); }
+    // O - 1
+    @keyframes bounce-back-1 {
+      0%   { transform: translateY( -10em ) translateX( 8em ) rotate( 45deg ); }
+      //25%  { transform: translateY( -.1em ) rotate( 30deg ); }
+      50%  { transform: translateY( .3em ) rotate( -5deg ); }
+      //75%  { transform: translateY( -.5em ) rotate( 2deg ); }
+      100% { transform: translateY( 0 ) translateX( 0 ) rotate( 0 ); }
     }
-    @keyframes bounce3 {
-      0%   { transform: translateY( 0 ) rotate( 0 ); }
-      60%  { transform: translateY( -1em ) rotate( 60deg ); }
-      80%  { transform: translateY( .5em ) rotate( -20deg ); }
-      90%  { transform: translateY( -.2em ) rotate( 5deg ); }
-      100% { transform: translateY( 0 ) rotate( 0 ); }
+
+    @keyframes bounce-1 {
+      0%   { transform: translateY( 0 ) translateX( 0 ) rotate( 0 ); }
+      //25%  { transform: translateY( -.5em ) rotate( 30deg ); }
+      50%  { transform: translateY( .3em ) rotate( -5deg ); }
+      //75%  { transform: translateY( -.1em ) rotate( 2deg ); }
+      100% { transform: translateY( -10em ) translateX( 8em ) rotate( 45deg ); }
     }
+
+    // P - 2
+    @keyframes bounce-back-2 {
+      0%   { transform: translateY( 5em ) translateX( 26em ) rotate( 120deg ); }
+      //25%  { transform: translateY( -.1em ) rotate( 30deg ); }
+      50%  { transform: translateY( .3em ) rotate( -5deg ); }
+      //75%  { transform: translateY( -.5em ) rotate( 2deg ); }
+      100% { transform: translateY( 0 ) translateX( 0 ) rotate( 0 ); }
+    }
+
+    @keyframes bounce-2 {
+      0%   { transform: translateY( 0 ) translateX( 0 ) rotate( 0 ); }
+      //25%  { transform: translateY( -.5em ) rotate( 30deg ); }
+      50%  { transform: translateY( .3em ) rotate( -5deg ); }
+      //75%  { transform: translateY( -.1em ) rotate( 2deg ); }
+      100% { transform: translateY( 5em ) translateX( 26em ) rotate( 120deg ); }
+    }
+
+    // P - 3
+    @keyframes bounce-back-3 {
+      0%   { transform: translateY( 11em ) translateX( 0em ) rotate( 180deg ); }
+      //25%  { transform: translateY( -.1em ) rotate( 30deg ); }
+      50%  { transform: translateY( .3em ) rotate( -5deg ); }
+      //75%  { transform: translateY( -.5em ) rotate( 2deg ); }
+      100% { transform: translateY( 0 ) translateX( 0 ) rotate( 0 ); }
+    }
+
+    @keyframes bounce-3 {
+      0%   { transform: translateY( 0 ) translateX( 0 ) rotate( 0 ); }
+      //25%  { transform: translateY( -.5em ) rotate( 30deg ); }
+      50%  { transform: translateY( .3em ) rotate( -5deg ); }
+      //75%  { transform: translateY( -.1em ) rotate( 2deg ); }
+      100% { transform: translateY( 11em ) translateX( 0em ) rotate( 180deg ); }
+    }
+
+    // A - 4
+    @keyframes bounce-back-4 {
+      0%   { transform: translateY( -13em ) translateX( -26em ) rotate( -120deg ); }
+      //25%  { transform: translateY( -.1em ) rotate( 30deg ); }
+      50%  { transform: translateY( .3em ) rotate( -5deg ); }
+      //75%  { transform: translateY( -.5em ) rotate( 2deg ); }
+      100% { transform: translateY( 0 ) translateX( 0 ) rotate( 0 ); }
+    }
+
+    @keyframes bounce-4 {
+      0%   { transform: translateY( 0 ) translateX( 0 ) rotate( 0 ); }
+      //25%  { transform: translateY( -.5em ) rotate( 30deg ); }
+      50%  { transform: translateY( .3em ) rotate( -5deg ); }
+      //75%  { transform: translateY( -.1em ) rotate( 2deg ); }
+      100% { transform: translateY( -13em ) translateX( -26em ) rotate( -120deg ); }
+    }
+
   }
 }

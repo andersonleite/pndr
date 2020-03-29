@@ -15,10 +15,11 @@ poppaContainer.addEventListener("mouseover", (event)=>{
 
 })
 
-poppaContainer.addEventListener("animationend", (event)=> {
+// poppaContainer.addEventListener("animationend", (event)=> {
+poppaContainer.addEventListener("mouseout", (event)=> {
 
   // stop logo anim
-  poppa.classList.remove('pulse')
+  // poppa.classList.remove('pulse')
 
   // stop letters anim
   for( var i = 0; i <= 4; i++ ) {
