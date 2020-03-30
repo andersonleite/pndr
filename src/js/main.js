@@ -1,17 +1,17 @@
 // lOGO
 // ==========================================================================
-const poppa = document.querySelector('.logo');
+const poppa = document.querySelector('img.logo');
 const poppaContainer = document.querySelector('.poppa-container');
-poppaContainer.addEventListener("mouseover", (event)=>{
+poppa.addEventListener("mouseover", (event)=>{
 
   // start logo anim
-  poppa.classList.add('pulse')
+  poppa.classList.add('animate')
 
   // start letters anim
-  for( var i = 0; i <= 4; i++ ) {
-    var letter = document.querySelector( '.poppa-' + i );
-    letter.classList.add( 'animate' );
-  }
+  // for( var i = 0; i <= 4; i++ ) {
+  //   var letter = document.querySelector( '.poppa-' + i );
+  //   letter.classList.add( 'animate' );
+  // }
 
 })
 
@@ -19,13 +19,14 @@ poppaContainer.addEventListener("mouseover", (event)=>{
 poppaContainer.addEventListener("mouseout", (event)=> {
 
   // stop logo anim
-  // poppa.classList.remove('pulse')
+  poppa.classList.remove('animate')
+  // poppa.classList.add('poppa-init')
 
   // stop letters anim
-  for( var i = 0; i <= 4; i++ ) {
-    var letter = document.querySelector( '.poppa-' + i );
-    letter.classList.remove( 'animate' );
-  }
+  // for( var i = 0; i <= 4; i++ ) {
+  //   var letter = document.querySelector( '.poppa-' + i );
+  //   letter.classList.remove( 'animate' );
+  // }
 
 })
 
