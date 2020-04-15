@@ -11,6 +11,7 @@ body {
   background: $bg;
   font-family: 'Woodland', sans-serif;
   height: 100vh;
+  overflow: hidden;
 }
 a {
   color: $pink;
