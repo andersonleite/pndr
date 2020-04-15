@@ -37,5 +37,16 @@
 }
 
 .contact{
-  margin-top: 40px;
+  margin: 40px 0;
 }
+.by{
+  position: fixed;
+  bottom: 40px;
+  small{
+    color: $pink;
+  }
+  @media (max-width: 1180px){
+    position: inherit;
+  }
+}
+

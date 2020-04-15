@@ -62,13 +62,14 @@ $TRANSITION: linear;
 
 }
 
-@media (max-width: 768px){
+@media (max-width: 1180px){
   .poppa-container-mobile{
     display: block;
     text-align: center;
     padding-top: 40px;
     img {
       width: 80%;
+      max-width: 640px;
     }
   }
   .poppa-container{

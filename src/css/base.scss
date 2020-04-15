@@ -12,6 +12,9 @@ body {
   font-family: 'Woodland', sans-serif;
   height: 100vh;
   overflow: hidden;
+  @media (max-width: 1180px){
+    overflow: initial;
+  }
 }
 a {
   color: $pink;

@@ -33,7 +33,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|png|svg)$/,
+        test: /\.(jpg|png|svg|ico)$/,
         use: [
           'file-loader'
         ]
@@ -54,6 +54,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
+      favicon: "./src/images/favicon/favicon.ico",
       template: "./src/index.html",
       filename: "./index.html"
     }),
