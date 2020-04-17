@@ -6,6 +6,12 @@ $TRANSITION: linear;
 }
 
 .poppa-container{
+  opacity: 0;
+  transition: opacity .4s cubic-bezier(0.7, 0.9, 0.4, 1.2) .2s;
+  &.loaded{
+    opacity: 1;
+  }
+
   margin: 0 auto;
 
   &:hover > .logo{

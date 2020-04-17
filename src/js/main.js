@@ -7,8 +7,12 @@ const poppa3 = document.querySelector('.poppa-3');
 const poppa4 = document.querySelector('.poppa-4');
 const poppa5 = document.querySelector('.poppa-5');
 
+const poppaContainer = document.querySelector('.poppa-container');
+
 // define bounderies
 window.onload = function() {
+
+  poppaContainer.classList.add('loaded')
 
   // horizontal bounderies
   x1 = (window.innerWidth * .23);
