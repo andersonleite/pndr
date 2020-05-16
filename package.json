@@ -4,7 +4,7 @@
   "description": "Poppa",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "start": "webpack-dev-server --mode development --open --host 0.0.0.0 --disable-host-check",
     "build": "webpack --mode production",
     "deploy": "npm run build && gcloud app deploy --project poppa-272022"
   },

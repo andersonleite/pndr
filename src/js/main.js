@@ -22,34 +22,41 @@ window.onload = function() {
   y1 = (window.innerHeight * .25);
   y2 = 2 * y1;
 
+  setTimeout(()=>{
+    animate(300, 100)
+  }, 1000)
 };
 
 let flicker = 0;
+
+function animateToInitialState(){
+  poppa1.style.transform = `perspective(500px) translate3d(0px, 0, 0px)`;
+  poppa2.style.transform = `perspective(500px) translate3d(0px, 0, 0px)`;
+  poppa3.style.transform = `perspective(500px) translate3d(0px, 0, 0px)`;
+  poppa4.style.transform = `perspective(500px) translate3d(0px, 0, 0px)`;
+  poppa5.style.transform = `perspective(500px) translate3d(0px, 0, 0px)`;
+}
+
+function animate(x1, y1) {
+  const v = Math.random(10);
+  poppa1.style.transform = `translate3d(-${x1 * v}px, ${y1 * v}px, 0px) rotate(-45deg)`;
+  poppa2.style.transform = `translate3d(${x1 / 2 * v}px, -${y1 * v}px, 0px) rotate(45deg)`;
+  poppa3.style.transform = `translate3d(${x1 * v}px, ${y1 / 2 * v}px, 0px) rotate(180deg)`;
+  poppa4.style.transform = `translate3d(${x1 / 2 * v}px, ${y1 * v}px, 0px) rotate(-150deg)`;
+  poppa5.style.transform = `translate3d(-${x1 * v}px, -${y1 * v}px, 0px) rotate(-150deg)`;
+}
 
 const poppa = new (function() {
   this.anim = function(event){
     event.preventDefault();
 
-    // const v = 0.5;
-    const v = Math.random(10);
-
       if(Math.abs(flicker-event.pageX)>100) {
 
         // LERP
         if (event.pageX < x1 || event.pageX > x2) {
-          poppa1.style.transform = `perspective(500px) translate3d(0px, 0, 0px)`;
-          poppa2.style.transform = `perspective(500px) translate3d(0px, 0, 0px)`;
-          poppa3.style.transform = `perspective(500px) translate3d(0px, 0, 0px)`;
-          poppa4.style.transform = `perspective(500px) translate3d(0px, 0, 0px)`;
-          poppa5.style.transform = `perspective(500px) translate3d(0px, 0, 0px)`;
-
+          animateToInitialState()
         } else {
-          poppa1.style.transform = `translate3d(-${x1 * v}px, ${y1 * v}px, 0px) rotate(-45deg)`;
-          poppa2.style.transform = `translate3d(${x1 / 2 * v}px, -${y1 * v}px, 0px) rotate(45deg)`;
-          poppa3.style.transform = `translate3d(${x1 * v}px, ${y1 / 2 * v}px, 0px) rotate(180deg)`;
-          poppa4.style.transform = `translate3d(${x1 / 2 * v}px, ${y1 * v}px, 0px) rotate(-150deg)`;
-          poppa5.style.transform = `translate3d(-${x1 * v}px, -${y1 * v}px, 0px) rotate(-150deg)`;
-
+          animate(x1, y1)
         }
         flicker = event.pageX
       }

@@ -36,7 +36,7 @@ $TRANSITION: linear;
   }
 
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative
 }
 .poppa {
@@ -68,20 +68,50 @@ $TRANSITION: linear;
 
 }
 
-@media (max-width: 1180px){
-  .poppa-container-mobile{
-    display: block;
-    text-align: center;
-    padding-top: 40px;
-    img {
-      width: 80%;
-      max-width: 640px;
-    }
+//@media (max-width: 1180px){
+//  .poppa-container-mobile{
+//    display: block;
+//    text-align: center;
+//    padding-top: 40px;
+//    img {
+//      width: 80%;
+//      max-width: 640px;
+//    }
+//  }
+//  .poppa-container{
+//    display: none;
+//  }
+//}
+
+
+@media (max-width: 1180px) {
+  .intro{
+    padding-top: 0px;
+    font-size: 36px;
   }
   .poppa-container{
-    display: none;
+    height: initial;
+    text-align: center;
+    .logo {
+      margin-top: 80px;
+      width: 80%;
+    }
+  }
+
+  .poppa-name{
+    height: initial;
+    .poppa-letter{
+      transition: transform 10s $TRANSITION;
+      margin: 7% 0;
+      img {
+        height: 40px;
+      }
+    }
   }
 }
+
+
+
 
 // letters anim
 // ============================================
