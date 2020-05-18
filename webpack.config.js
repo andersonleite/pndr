@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const SocialTags = require('social-tags-webpack-plugin');
 
 module.exports = {
   entry: './src/js/app.js',
@@ -64,6 +65,26 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: './src/assets', to: 'assets' }
-    ])
+    ]),
+    new SocialTags({
+      appUrl: 'http://poppa.info/',
+      facebook: {
+        'og:url': "http://poppa.info",
+        'og:type': "website",
+        'og:title': "We are Poppa",
+        'og:image': './src/images/facebook.png',
+        'og:description': "Poppa is a Brazilian music duo based in London consisting of Arthur Petrillo and Geo Freitas.",
+        'og:site_name': "Poppa"
+      },
+      twitter: {
+        "twitter:card": "summary",
+        "twitter:site": "@arthurpetrillo",
+        "twitter:creator": "@arthurpetrillo",
+        "twitter:url": "http://poppa.info",
+        "twitter:title": "We are Poppa",
+        "twitter:description": "Poppa is a Brazilian music duo based in London consisting of Arthur Petrillo and Geo Freitas.",
+        "twitter:image": './src/images/twitter.png'
+      },
+    })
   ]
 }
