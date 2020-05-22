@@ -13,10 +13,14 @@
     line-height: 20px;
   }
   span {
-    margin-bottom: 40px;
     display: block;
     line-height: 25px;
   }
+
+  .info__news{
+    margin-bottom: 40px;
+  }
+
 }
 
 @media (max-width: 768px){
