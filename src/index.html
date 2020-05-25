@@ -20,6 +20,12 @@
   <link rel="icon" href="/src/images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+  <div id="playerModal" class="playerModal">
+    <div class="close"><img src="assets/svg/close.svg" alt="close"></div>
+    <iframe src="https://player.vimeo.com/video/420215024?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+
   <div class="grid">
     <div class="poppa-container-mobile">
       <img src="assets/logo-static.png" alt="">
@@ -41,7 +47,6 @@
       <p>Poppa is a Brazilian music duo based in London, consisting of <a href="https://www.instagram.com/arthurpetrillo/" target="_blank">Arthur Petrillo</a> and <a href="https://www.instagram.com/geofreitas/" target="_blank">Geo Freitas</a>.</p>
       <p>The songs are <span style="white-space: nowrap;">co-produced</span> and <span style="white-space: nowrap;">co-arranged</span> by
         <a href="https://www.luchalibreaudio.de/" target="_blank">Billy Mello</a>.</p>
-      <p>THE FIRST EP WILL BE RELEASED ON THE NEXT FEW WEEKS ON THE STREAMING SERVICES.</p>
     </div>
 
     <div class="info">
@@ -50,17 +55,16 @@
         <p>News about Poppa:</p>
         <span><a target="_blank" href="https://www.cssdesignawards.com/sites/poppa/37151/">Poppa’s site got nominated on the CSS Design Awards</a></span>
         <span><a target="_blank" href="https://abduzeedo.com/superb-branding-work-poppa">Our branding got featured at Abduzeedo</a></span>
-        <span><a target="_blank" href="https://vimeo.com/420215024">Check out our brand video.</a></span>
+        <span><a id="togglePlayer">Check out our brand video.</a></span>
       </div>
 
       <div>
         <p>Poppa links:</p>
         <ul>
-<!--          <li>Spotify</li>-->
-<!--          <li>Apple Music</li>-->
-<!--          <li>Google Play Music</li>-->
-<!--          <li>Youtube Music</li>-->
+          <li><a href="https://open.spotify.com/artist/3yeYbawned649vXQXOJcoA?si=J_L4x40ET7e1mxlZ2riEIA" target="_blank">Spotify</a></li>
+          <li><a href="https://music.apple.com/gb/artist/poppa/1514960637" target="_blank">Apple Music</a></li>
           <li><a href="http://instagram.com/wearepoppa" target="_blank">Instagram</a></li>
+          <li><a href="https://www.facebook.com/wearepoppa" target="_blank">Facebook</a></li>
         </ul>
       </div>
       <div class="contact">
@@ -72,5 +76,8 @@
       </div>
     </div>
   </div>
+
+  <script src="https://player.vimeo.com/api/player.js"></script>
+
 </body>
 </html>
