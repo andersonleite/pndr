@@ -1,40 +1,38 @@
 {
-  "name": "poppa",
+  "name": "pndr",
   "version": "0.0.1",
-  "description": "Poppa",
+  "description": "Pndr",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --host 0.0.0.0 --disable-host-check",
     "build": "webpack --mode production",
-    "deploy": "npm run build && gcloud app deploy --project poppa-272022"
+    "deploy": "npm run build && gcloud app deploy --project pndr-287017"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andersonleite/poppa.git"
+    "url": "git+https://github.com/andersonleite/pndr.git"
   },
   "keywords": [
-    "music"
+    "pndr"
   ],
   "author": "Anderson Leite",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/andersonleite/poppa/issues"
-  },
-  "homepage": "https://github.com/andersonleite/poppa#readme",
   "devDependencies": {
-    "@vimeo/player": "^2.11.0",
-    "copy-webpack-plugin": "^5.0.3",
-    "css-loader": "^3.1.0",
-    "file-loader": "^4.3.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
     "html-srcsets-loader": "^0.5.1",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.3",
     "social-tags-webpack-plugin": "^1.1.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.36.1",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "fullpage.js": "^3.0.9"
   }
 }
