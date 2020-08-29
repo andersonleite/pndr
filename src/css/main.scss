@@ -1,7 +1,13 @@
 @import "reset";
+@import "mixins";
 @import "colors";
 @import "base";
-@import "grid";
-@import "intro";
 @import "pndr";
-@import "info";
+
+// sections
+@import "sections/intro";
+@import "sections/about";
+@import "sections/services";
+@import "sections/capabilities";
+@import "sections/contact";
+@import "sections/card";

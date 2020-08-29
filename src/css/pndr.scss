@@ -1,125 +1,37 @@
-$TIMING: .4s;
-$TRANSITION: linear;
-
-.poppa-container-mobile{
-  display: none;
+.index {
+  font-family: DM Serif Display;
+  font-size: 32px;
+  line-height: 36px;
+  margin-right: 33px;
 }
 
-.poppa-container{
-  opacity: 0;
-  transition: opacity .4s cubic-bezier(0.7, 0.9, 0.4, 1.2) .2s;
-  &.loaded{
-    opacity: 1;
-  }
-
-  margin: 0 auto;
-
-  &:hover > .logo{
-    will-change: transform;
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-  }
-
-  .logo{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    z-index: 1;
-
-    transition: all $TIMING $TRANSITION;
-
-  }
-
-  width: 100%;
-  height: 100vh;
-  position: relative
-}
-.poppa {
-  border-radius: 50%;
-  background: $orange;
-  width: 400px;
-  height: 350px;
+.header {
+  font-family: DM Serif Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 25px;
+  margin-top: 10px;
 }
 
-.poppa-name{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  .poppa-letter{
-    margin: 50px 0;
-    box-sizing: border-box;
-
-    will-change: transform;
-    transition: transform $TIMING $TRANSITION;
-    position: relative;
-    z-index: 2;
-    img {
-      height: 80px;
-    }
+.box {
+  .title {
+    font-family: DM Serif Display;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    color: #F4F4F4;
   }
-
-}
-
-//@media (max-width: 1180px){
-//  .poppa-container-mobile{
-//    display: block;
-//    text-align: center;
-//    padding-top: 40px;
-//    img {
-//      width: 80%;
-//      max-width: 640px;
-//    }
-//  }
-//  .poppa-container{
-//    display: none;
-//  }
-//}
-
-
-@media (max-width: 1180px) {
-  .intro{
-    padding-top: 0px;
-    font-size: 36px;
-  }
-  .poppa-container{
-    height: initial;
-    text-align: center;
-    .logo {
-      margin-top: 80px;
-      width: 80%;
-    }
-  }
-
-  .poppa-name{
-    height: initial;
-    .poppa-letter{
-      transition: transform 10s $TRANSITION;
-      margin: 7% 0;
-      img {
-        height: 40px;
-      }
-    }
+  .description {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #F4F4F4;
   }
 }
 
-
-
-
-// letters anim
-// ============================================
-.poppa-name {
-  .div {
-    display: inline-block;
-    position: relative;
-    padding: .5em .2em;
-    will-change: transform;
-  }
-}

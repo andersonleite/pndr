@@ -1,0 +1,20 @@
+.services {
+  .card {
+    background: url('../assets/bg-2.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .services-info{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: auto;
+
+    .box {
+      margin-bottom: 36px;
+    }
+  }
+
+}
