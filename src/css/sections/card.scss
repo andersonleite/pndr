@@ -6,6 +6,10 @@
   color: #ffffff;
   height: 100%;
 
+  @include _viewport(small){
+    padding-bottom: 5%;
+  }
+
   .card {
     display: flex;
     flex-direction: column;
@@ -19,6 +23,26 @@
     width: 90%;
     height: 90vh;
     margin: 20px 10px;
+
+    .large-bg {
+      display: none;
+      border-radius: 15px;
+
+      @include _viewport(large){
+        display: block;
+        height: 100%;
+        width: 50%;
+      }
+    }
+
+    @include _viewport(large) {
+      .index {
+        font-size: 48px;
+        line-height: 66px;
+        letter-spacing: -0.01em;
+        margin-right: 84px;
+      }
+    }
   }
 
   img {

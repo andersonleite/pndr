@@ -1,19 +1,50 @@
 .services {
   .card {
-    background: url('../assets/bg-2.png');
-    background-size: cover;
-    background-position: center;
+    @include _viewport(small) {
+      background: url('../assets/bg-2.png');
+      background-size: cover;
+      background-position: center;
+    }
+    background: #000000;
+
+    .large-bg {
+      .bg {
+        background: url('../assets/bg-2.png');
+        background-size: cover;
+        background-position: center;
+
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px
+      }
+    }
   }
 
   .services-info{
     display: flex;
     flex-direction: row;
     margin-top: 30px;
-    margin-left: 30px;
+    width: 74%;
     margin-bottom: auto;
+
+    @include _viewport(large) {
+      width: 50%;
+      padding-left: 10%;
+      padding-top: 5%;
+
+      .header {
+        font-size: 48px;
+        line-height: 60px;
+        letter-spacing: -0.01em;
+      }
+    }
 
     .box {
       margin-bottom: 36px;
+      @include _viewport(large) {
+        padding-right: 45%;
+      }
     }
   }
 

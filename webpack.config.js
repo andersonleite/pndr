@@ -1,6 +1,8 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+// https://github.com/jantimon/html-webpack-plugin/issues/1377
 const SocialTags = require('social-tags-webpack-plugin');
 
 module.exports = {
@@ -72,25 +74,25 @@ module.exports = {
       patterns: [
       { from: './src/assets', to: 'assets' }
     ]}),
-    // new SocialTags({
-    //   appUrl: 'http://poppa.info/',
-    //   facebook: {
-    //     'og:url': "http://poppa.info",
-    //     'og:type': "website",
-    //     'og:title': "Pndr",
-    //     'og:image': './src/images/facebook.png',
-    //     'og:description': "Pndr is....",
-    //     'og:site_name': "Poppa"
-    //   },
-    //   twitter: {
-    //     "twitter:card": "summary",
-    //     "twitter:site": "@pndr",
-    //     "twitter:creator": "@pndr",
-    //     "twitter:url": "http://pndr.co",
-    //     "twitter:title": "Pndr",
-    //     "twitter:description": "Pndr",
-    //     "twitter:image": './src/images/twitter.png'
-    //   },
-    // })
+    new SocialTags({
+      appUrl: 'http://pndr.co/',
+      facebook: {
+        'og:url': "http://pndr.co",
+        'og:type': "website",
+        'og:title': "pndr",
+        'og:image': './src/images/facebook.png',
+        'og:description': "A brand transformation design company",
+        'og:site_name': "pndr"
+      },
+      twitter: {
+        "twitter:card": "summary",
+        "twitter:site": "@pndr",
+        "twitter:creator": "@pndr",
+        "twitter:url": "http://pndr.co",
+        "twitter:title": "Pndr",
+        "twitter:description": "A brand transformation design company",
+        "twitter:image": './src/images/twitter.png'
+      },
+    })
   ]
 }
