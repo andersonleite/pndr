@@ -45,8 +45,8 @@
 
       .copy {
         margin-top: 10px;
-        font-size: 20px;
-        line-height: 28px;
+        font-size: 18px;
+        line-height: 24px;
         max-width: 220px;
 
         @include _viewport(large){
@@ -60,7 +60,7 @@
         }
 
         p:first-child {
-          margin-bottom: 40px;
+          margin-bottom: 10%;
         }
       }
     }
@@ -88,6 +88,22 @@
           letter-spacing: 0.01em;
           color: #F4F4F4;
 
+          p:nth-child(1) {
+            font-family: DM Serif Display;
+            font-size: 18px;
+            line-height: 24px;
+          }
+
+          p:nth-child(2),
+          p:nth-child(3) {
+            font-family: DM Sans;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.01em;
+          }
+
           @include _viewport(large){
             padding-top: 10px;
             font-family: DM Sans;
@@ -111,6 +127,12 @@
         .avatar {
           min-width: 80px;
           height: 80px;
+
+          @include _viewport(small){
+            min-width: 60px;
+            height: 60px;
+          }
+
           background: #ffffff;
           border-radius: 50%;
           margin-right: 10px;

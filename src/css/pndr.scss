@@ -1,7 +1,7 @@
 .index {
   font-family: DM Serif Display;
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 28px;
+  line-height: 38px;
   margin-right: 33px;
 }
 
@@ -9,10 +9,15 @@
   font-family: DM Serif Display;
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
-  line-height: 28px;
+  font-size: 24px;
+  line-height: 33px;;
   margin-bottom: 25px;
   margin-top: 10px;
+  @include _viewport(small){
+    font-size: 24px;
+    line-height: 33px;
+  }
+
 }
 
 .box {
@@ -23,6 +28,11 @@
     font-size: 20px;
     line-height: 28px;
     color: #F4F4F4;
+
+    @include _viewport(small){
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
   .description {
     font-family: DM Sans;
@@ -32,6 +42,15 @@
     line-height: 24px;
     letter-spacing: 0.01em;
     color: #F4F4F4;
+
+    @include _viewport(small){
+      font-family: DM Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.01em;
+    }
   }
 }
 

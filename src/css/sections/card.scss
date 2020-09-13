@@ -6,10 +6,6 @@
   color: #ffffff;
   height: 100%;
 
-  @include _viewport(small){
-    padding-bottom: 5%;
-  }
-
   .card {
     display: flex;
     flex-direction: column;
@@ -20,9 +16,8 @@
     align-items: center;
 
     border-radius: 15px;
-    width: 90%;
-    height: 90vh;
-    margin: 20px 10px;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
 
     .large-bg {
       display: none;
