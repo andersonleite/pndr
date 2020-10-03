@@ -1,3 +1,5 @@
+import translation from "./i18n/translation";
+
 class Translator {
   constructor(options = {}) {
     this._options = Object.assign({}, this.defaultConfig, options);
@@ -12,7 +14,9 @@ class Translator {
       this._options.defaultLanguage &&
       typeof this._options.defaultLanguage == "string"
     ) {
-      this._getResource(this._options.defaultLanguage);
+      if(this._options.defaultLanguage==='pt'){
+        this._getResource(this._options.defaultLanguage)
+      }
     }
   }
 
@@ -30,14 +34,8 @@ class Translator {
     return lang.substr(0, 2);
   }
 
-  _fetch(path) {
-    return fetch(path)
-      .then(response => response.json())
-      .catch(() => {
-        console.error(
-          `Could not load ${path}. Please make sure that the file exists.`
-        );
-      });
+  _fetch() {
+    return translation;
   }
 
   async _getResource(lang) {
@@ -45,9 +43,7 @@ class Translator {
       return JSON.parse(this._cache.get(lang));
     }
 
-    var translation = await this._fetch(
-      `${this._options.filesLocation}/${lang}.json`
-    );
+    var translation = await this._fetch();
 
     if (!this._cache.has(lang)) {
       this._cache.set(lang, JSON.stringify(translation));

@@ -1,4 +1,4 @@
-{
+const translation = {
   "intro": {
     "title-up": "uma empresa de design",
     "title-down": "para transformar marcas"
@@ -45,3 +45,5 @@
     "rights": "Todos Direitos Reservados"
   }
 }
+
+export default translation

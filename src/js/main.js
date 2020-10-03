@@ -1,5 +1,6 @@
 import fullpage from 'fullpage.js'
 import Translator from "./translator";
+var i18n = require("./i18n/translation.js");
 
 // load fullPage.js
 var fullPageInstance = new fullpage('#fullpage', {
