@@ -1,5 +1,5 @@
 .contact-info{
-  background: url('../assets/smoke.png');
+  background: url('../assets/smoke-tablet.png');
   background-size: cover;
   background-position: center;
 
@@ -15,7 +15,7 @@
   font-family: DM Serif Display;
   font-style: normal;
   font-weight: normal;
-  color: #FFFFFF;
+  color: #FBFCFF;
 
   .logo {
     display: flex;
@@ -39,7 +39,7 @@
 
     .chat {
       font-size: 20px;
-      line-height: 28px;
+      line-height: 24px;
 
       p:nth-child(2){
         text-decoration: underline;
@@ -53,8 +53,12 @@
     font-family: DM Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+    @include _viewport(large){
+        font-size: 14px;
+        line-height: 18px;
+    }
+    font-size: 12px;
+    line-height: 16px;
     text-align: center;
     letter-spacing: 0.02em;
   }

@@ -30,9 +30,14 @@
       }
     }
 
+    .index {
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -0.01em;
+    }
     @include _viewport(large) {
       .index {
-        font-size: 48px;
+        font-size: 40px;
         line-height: 66px;
         letter-spacing: -0.01em;
         margin-right: 84px;
