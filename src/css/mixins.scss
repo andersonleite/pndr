@@ -1,6 +1,8 @@
 @mixin _viewport($viewport) {
-  @if $viewport == small {
-    @media (max-width: 1025px) {@content;}
+  @if $viewport == small {  
+    @media (max-width: 400px) {@content;}
+  } @else if $viewport == medium {
+    @media (min-width: 400px) and (max-width: 1025px) {@content;} 
   } @else if $viewport == large {
     @media (min-width: 1025px) {@content;}
   }

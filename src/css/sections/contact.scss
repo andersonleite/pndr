@@ -1,7 +1,14 @@
 .contact-info{
-  background: url('../assets/smoke-tablet.png');
-  background-size: cover;
-  background-position: center;
+@include _viewport(small){
+    background: url('../assets/smoke.png');
+    background-size: cover;
+    background-position: center;
+  }
+  @include _viewport(medium){
+    background: url('../assets/smoke-tablet.png');
+    background-size: cover;
+    background-position: center;
+  }
 
   @include _viewport(large){
     background: url('../assets/smoke-large.png');

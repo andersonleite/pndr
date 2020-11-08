@@ -2,7 +2,12 @@
   font-family: DM Serif Display;
   font-size: 28px;
   line-height: 38px;
-  margin-right: 60px;
+  @include _viewport(small){
+  margin-right: 15px;
+  }
+  @include _viewport(medium){
+  margin-right: 75px;
+  }
 }
 
 .header {
@@ -26,7 +31,7 @@
   .title {
     font-family: DM Serif Display;
     font-weight: normal;
-    color: #F4F4F4;
+    color: #FBFCFF;
     margin-bottom: 10px;
 
     font-size: 24px;

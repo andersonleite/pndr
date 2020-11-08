@@ -1,6 +1,11 @@
 .services {
   .card {
     @include _viewport(small) {
+      background: url('../assets/bg-2.png');
+      background-size: cover;
+      background-position: center;
+    }
+    @include _viewport(medium) {
       background: url('../assets/bg-2-tablet.png');
       background-size: cover;
       background-position: center;
@@ -29,6 +34,13 @@
     margin-bottom: auto;
 
     margin-top: 80px;
+    @include _viewport(small) {
+        margin-top: 30px;
+        .header {
+        font-size: 24px;
+        margin-top: 0px;    
+      }
+    }
     @include _viewport(large) {
       margin-top: 30px;
       width: 50%;
@@ -41,6 +53,16 @@
         letter-spacing: -1%;
       }
     }
+    @include _viewport(medium) {
+      .header {
+        font-size: 24px;
+      }
+    }
+    @include _viewport(small) {
+      .header {
+        margin-bottom: 24px;
+      }
+    }
 
     .box {
       margin-bottom: 36px;
@@ -49,8 +71,12 @@
       }
 
       .title{
-          @include _viewport(small) {
+          @include _viewport(medium) {
             max-width: 250px;
+          }
+          @include _viewport(small) {
+            font-size: 18px;
+            line-height: 24px;
           }
       }
 

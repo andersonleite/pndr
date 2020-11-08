@@ -1,6 +1,11 @@
 .capabilities {
   .card {
-    @include _viewport(small){
+      @include _viewport(small){
+      background: url('../assets/bg-3.png');
+      background-size: cover;
+      background-position: center;
+    }
+    @include _viewport(medium){
       background: url('../assets/bg-3-tablet.png');
       background-size: cover;
       background-position: center;
@@ -24,6 +29,14 @@
   .capabilities-info {
     display: flex;
     flex-direction: row;
+    @include _viewport(small) {
+        margin-top: 30px;
+        .header {
+        font-size: 24px;
+        margin-top: 0px;   
+        margin-bottom: 24px; 
+      }
+    }
     margin-top: 80px;
     width: 74%;
     margin-bottom: auto;
@@ -64,12 +77,20 @@
         @include _viewport(large) {
             margin-top: 20px;
         }
+         @include _viewport(small) {
+            margin-top: 40px;
+        }
     }
     .title {
         @include _viewport(large) {
             width: 245px;
         }
         width: 240px;
+         @include _viewport(small) {
+             width: 200px;
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
   }
 }

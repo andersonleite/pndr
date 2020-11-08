@@ -5,6 +5,11 @@
       background-size: cover;
       //background-position: center;
     }
+    @include _viewport(medium){
+      background: url('../assets/bg-1.png');
+      background-size: cover;
+      //background-position: center;
+    }
     background: #000000;
 
     .large-bg {
@@ -24,7 +29,16 @@
   .about-info {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    @include _viewport(medium){
+        margin-top: 80px; 
+    }
+    @include _viewport(small){
+        display: flex;
+        flex-direction: column;
+        // width: 227px;
+        margin-top: 10px;     
+        margin-bottom: 0px;
+    }
     width: 74%;
     margin-bottom: auto;
 
@@ -32,7 +46,10 @@
       display: flex;
       margin-bottom: 80px;
       @include _viewport(large){
-          margin-bottom: 60px;
+        margin-bottom: 60px;
+      }
+     @include _viewport(small){
+        margin-bottom: 40px;
       }
     }
 
@@ -45,9 +62,19 @@
 
     .copy {
       margin-top: 20px;
-      font-size: 24px;
-      line-height: 28px;
+
       max-width: 290px;
+      @include _viewport(small){
+        margin-top: 16px;
+        font-size: 18px;
+        line-height: 24px;
+        margin-left: 10px;
+        max-width: 170px;
+      }
+      @include _viewport(medium){
+        font-size: 24px;
+        line-height: 28px;
+      }
         
       @include _viewport(large){
         font-family: DM Serif Display;
@@ -72,6 +99,11 @@
       color: #F4F4F4;
 
       margin-left: 30px;
+        @include _viewport(small){
+            margin-left: 0px;
+        }
+
+
         @include _viewport(large){
             margin-left: 0px;
         }
@@ -112,8 +144,16 @@
 
           p:nth-child(1) {
             font-family: DM Serif Display;
+            @include _viewport(small){
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 0px;
+            margin-top: 2px;
+            }
+            @include _viewport(medium){
             font-size: 20px;
             line-height: 24px;
+            }
             @include _viewport(large){
                 font-size: 20px;
                 line-height: 20px;
@@ -129,13 +169,20 @@
             font-family: DM Sans;
             font-style: italic;
             font-weight: normal;
-            @include _viewport(large){
-                font-size: 12px;
-                line-height: 16px;
-            }
+            @include _viewport(small){
             font-size: 12px;
             line-height: 16px;
             letter-spacing: 0.01em;
+            }
+            @include _viewport(medium){
+                font-size: 12px;
+                line-height: 16px;
+            }
+            @include _viewport(large){
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.01em;
+            }
           }
 
           @include _viewport(large){
@@ -159,8 +206,9 @@
 
 
           @include _viewport(small){
-            // min-width: 60px;
-            // height: 60px;
+            min-width: 66px;
+            height: 66px;
+            width: 66px;
           }
 
           background: #ffffff;
