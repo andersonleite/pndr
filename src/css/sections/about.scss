@@ -42,7 +42,7 @@
 
     .about-info-box {
       display: flex;
-      margin-bottom: 80px;
+      margin-bottom: 10%;
       @include _viewport(large){
         margin-bottom: 60px;
       }
