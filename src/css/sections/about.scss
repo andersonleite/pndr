@@ -35,9 +35,7 @@
     @include _viewport(small){
         display: flex;
         flex-direction: column;
-        // width: 227px;
-        margin-top: 10px;     
-        margin-bottom: 0px;
+        margin-top: 30px;     
     }
     width: 74%;
     margin-bottom: auto;
@@ -50,6 +48,9 @@
       }
      @include _viewport(small){
         margin-bottom: 40px;
+        .index {
+            margin-left: 2px;
+        }
       }
     }
 
